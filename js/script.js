@@ -4,7 +4,17 @@ ma che per i multipli di 3 stampi “Fizz” al posto del numero e per i multipl
 Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”. */
 
 for (let a = 1; a <= 100; a++) {
+    // console.log(a);
     
-    console.dir(a);
-    
+    let fizzbuzz = document.getElementById('fizzbuzz');
+
+    if (a % 3 === 0 && a % 5 === 0) {
+        fizzbuzz.innerHTML = `FizzBuzz`;
+    } else if (a % 3 === 0) {
+        fizzbuzz.innerHTML = `Fizz`;
+    } else if (a % 5 === 0) {
+        fizzbuzz.innerHTML = `Buzz`;
+    } else {
+        fizzbuzz.innerHTML = a;
+    }
 }
