@@ -9,14 +9,11 @@ for (let a = 1; a <= 100; a++) {
     let game = document.getElementById('game');
 
     if (a % 3 === 0 && a % 5 === 0) {
-        let fizzbuzz = document.querySelector('.fizzBuzz');
-        fizzbuzz.innerHTML += `FizzBuzz`;
+        game.innerHTML += `<div>FizzBuzz</div>`;
     } else if (a % 3 === 0) {
-        let fizz = document.querySelector('.fizz');
-        fizz.innerHTML += `Fizz`;
+        game.innerHTML += `<div>Fizz</div>`;
     } else if (a % 5 === 0) {
-        let buzz = document.querySelector('.buzz');
-        buzz.innerHTML += `Buzz`;
+        game.innerHTML += `<div>Buzz</div>`;
     } else {
         game.innerHTML += a;
     }
