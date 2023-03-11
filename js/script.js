@@ -8,13 +8,29 @@ for (let a = 1; a <= 100; a++) {
     
     let game = document.getElementById('game');
 
-    if (a % 3 === 0 && a % 5 === 0) {
-        game.innerHTML += `<div class="square">FizzBuzz</div>`;
+    if ((a % 3 === 0) && (a % 5 === 0)) {
+        game.innerHTML += `
+        <div id="fizzbuzz" class="square">
+        <div class="position">FizzBuzz</div>
+        </div>
+        `;
     } else if (a % 3 === 0) {
-        game.innerHTML += `<div class="square">Fizz</div>`;
+        game.innerHTML += `
+        <div id="fizz" class="square">
+        <div class="position">Fizz</div>
+        </div>
+        `;
     } else if (a % 5 === 0) {
-        game.innerHTML += `<div class="square">Buzz</div>`;
+        game.innerHTML += `
+        <div id="buzz" class="square">
+        <div class="position">Buzz</div>
+        </div>
+        `;
     } else {
-        game.innerHTML += `<div class="square">${a}</div>`;
+        game.innerHTML += `
+        <div id="a_variable" class="square">
+        <div class="position">${a}</div>
+        </div>
+        `;
     }
 }
